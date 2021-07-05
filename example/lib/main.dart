@@ -30,9 +30,8 @@ class CarouselPage extends StatelessWidget {
             showIndicator: true,
             indicatorBgPadding: 7.0,
             images: [
-              NetworkImage('https://cdn-images-1.medium.com/max/2000/1*GqdzzfB_BHorv7V2NV7Jgg.jpeg'),
-              NetworkImage('https://cdn-images-1.medium.com/max/2000/1*wnIEgP1gNMrK5gZU7QS0-A.jpeg'),
-              ExactAssetImage("assets/images/LaunchImage.jpg"),
+              NetworkImage('https://i.pinimg.com/originals/a2/4e/29/a24e29fc5ee1ef69ab11777f1d28641a.jpg'),
+              NetworkImage('https://i.pinimg.com/originals/93/a0/ae/93a0aeb22c7e27da4796efb4b2297ea4.jpg'),
             ],
           ),
         ),
