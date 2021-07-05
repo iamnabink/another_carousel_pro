@@ -14,7 +14,7 @@ enum DotPosition {
 
 class Carousel extends StatefulWidget {
   //All the images on this Carousel.
-  final List? images;
+  final List images;
 
   //All the images on this Carousel.
   final defaultImage;
@@ -95,7 +95,7 @@ class Carousel extends StatefulWidget {
   final void Function(int, int)? onImageChange;
 
   Carousel({
-    this.images,
+    required this.images,
     this.animationCurve = Curves.ease,
     this.animationDuration = const Duration(milliseconds: 300),
     this.dotSize = 8.0,
@@ -136,12 +136,10 @@ class CarouselState extends State<Carousel> {
   @override
   void initState() {
     super.initState();
-
-    if (widget.images != null) {
       if (widget.autoplay) {
         timer = Timer.periodic(widget.autoplayDuration, (_) {
           if (_controller.hasClients) {
-            if (_controller.page?.round() == (widget.images?.length)! - 1) {
+            if (_controller.page?.round() == widget.images.length - 1) {
               _controller.animateToPage(
                 0,
                 duration: widget.animationDuration,
@@ -155,12 +153,10 @@ class CarouselState extends State<Carousel> {
           }
         });
       }
-    }
   }
 
   @override
   void dispose() {
-    _controller.dispose();
     _controller.dispose();
     timer.cancel();
     super.dispose();
@@ -168,8 +164,7 @@ class CarouselState extends State<Carousel> {
 
   @override
   Widget build(BuildContext context) {
-    final List<Widget> listImages = (widget.images != null)
-        ? widget.images!.map<Widget>(
+    final List<Widget> listImages =  widget.images.map<Widget>(
             (netImage) {
               if (netImage is ImageProvider) {
                 return Container(
@@ -225,40 +220,40 @@ class CarouselState extends State<Carousel> {
                 return netImage;
               }
             },
-          ).toList()
-        : [
-            widget.defaultImage is ImageProvider
-                ? Container(
-                    decoration: BoxDecoration(
-                      borderRadius: widget.borderRadius
-                          ? BorderRadius.all( widget.radius ?? Radius.circular(8.0)): null,
-                      image: DecorationImage(
-                        //colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.dstATop),
-                        image: widget.defaultImage,
-                        fit: widget.boxFit,
-                      ),
-                    ),
-                    child: widget.overlayShadow
-                        ? Container(
-                            decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                begin: Alignment.bottomCenter,
-                                end: Alignment.center,
-                                stops: [0.0, widget.overlayShadowSize],
-                                colors: [
-                                  widget.overlayShadowColors != null
-                                      ? widget.overlayShadowColors!.withOpacity(1.0)
-                                      : Colors.grey[800]!.withOpacity(1.0),
-                                  widget.overlayShadowColors != null
-                                      ? widget.overlayShadowColors!.withOpacity(0.0) : Colors.grey[800]!.withOpacity(0.0)
-                                ],
-                              ),
-                            ),
-                          )
-                        : Container(),
-                  )
-                : widget.defaultImage,
-          ];
+          ).toList();
+        // : [
+        //     widget.defaultImage is ImageProvider
+        //         ? Container(
+        //             decoration: BoxDecoration(
+        //               borderRadius: widget.borderRadius
+        //                   ? BorderRadius.all( widget.radius ?? Radius.circular(8.0)): null,
+        //               image: DecorationImage(
+        //                 //colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.dstATop),
+        //                 image: widget.defaultImage,
+        //                 fit: widget.boxFit,
+        //               ),
+        //             ),
+        //             child: widget.overlayShadow
+        //                 ? Container(
+        //                     decoration: BoxDecoration(
+        //                       gradient: LinearGradient(
+        //                         begin: Alignment.bottomCenter,
+        //                         end: Alignment.center,
+        //                         stops: [0.0, widget.overlayShadowSize],
+        //                         colors: [
+        //                           widget.overlayShadowColors != null
+        //                               ? widget.overlayShadowColors!.withOpacity(1.0)
+        //                               : Colors.grey[800]!.withOpacity(1.0),
+        //                           widget.overlayShadowColors != null
+        //                               ? widget.overlayShadowColors!.withOpacity(0.0) : Colors.grey[800]!.withOpacity(0.0)
+        //                         ],
+        //                       ),
+        //                     ),
+        //                   )
+        //                 : Container(),
+        //           )
+        //         : widget.defaultImage,
+        //   ];
 
     final bottom = [
       DotPosition.bottomLeft,
