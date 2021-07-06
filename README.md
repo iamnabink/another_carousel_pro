@@ -12,7 +12,10 @@ Add the module to your project ``pubspec.yaml``:
 ...
 dependencies:
  ...
- another_carousel_pro: ^1.0.0
+  another_carousel_pro:
+     git:
+       url: https://github.com/iamnabink/another_carousel_pro.git
+       ref: master
 ...
 ```
 And install it using ``flutter packages get`` on your project folder. After that, just import the module and use it:
