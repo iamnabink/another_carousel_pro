@@ -129,7 +129,6 @@ class Carousel extends StatefulWidget {
 }
 
 class CarouselState extends State<Carousel> {
-  late Timer timer;
   int _currentImageIndex = 0;
   PageController _controller = PageController();
 
@@ -137,7 +136,7 @@ class CarouselState extends State<Carousel> {
   void initState() {
     super.initState();
       if (widget.autoplay) {
-        timer = Timer.periodic(widget.autoplayDuration, (_) {
+        Timer.periodic(widget.autoplayDuration, (_) {
           if (_controller.hasClients) {
             if (_controller.page?.round() == widget.images.length - 1) {
               _controller.animateToPage(
@@ -158,7 +157,6 @@ class CarouselState extends State<Carousel> {
   @override
   void dispose() {
     _controller.dispose();
-    timer.cancel();
     super.dispose();
   }
 
