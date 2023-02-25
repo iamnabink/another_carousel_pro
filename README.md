@@ -1,6 +1,5 @@
-# Null safe version of AnotherCarousel Pro [![pub package](https://img.shields.io/pub/v/carousel_pro.svg)](https://pub.dartlang.org/packages/another_carousel_pro)
-
-A Flutter AnotherCarousel widget.
+# AnotherCarousel [![pub package](https://img.shields.io/pub/v/carousel_pro.svg)](https://pub.dartlang.org/packages/another_carousel_pro)
+### Null safe version of Carousel Pro [Package](https://pub.dev/packages/carousel_pro)
 
 ## Usage
 
@@ -9,11 +8,7 @@ As simple as using any flutter Widget.
 **Example:**
 Add the module to your project ``pubspec.yaml``:
 ```yaml
-...
-dependencies:
- ...
   another_carousel_pro: ^1.0.0
-...
 ```
 And install it using ``flutter packages get`` on your project folder. After that, just import the module and use it:
 ```dart
@@ -273,8 +268,8 @@ The autoplay transition duration
   
 ## Credits
 
-Originally Developed by [JLouage (Julien Louage)](http://www.jlouage.com) <info@jlouage.com>
-Null Saftey Added by : Nabraj Khadka (https://github.com/iamnabink)
+### Originally Developed by [JLouage (Julien Louage)](http://www.jlouage.com) <info@jlouage.com>
+### Null Saftey Added by : [Nabraj Khadka](https://github.com/iamnabink)
 
 ## Contributing
 
