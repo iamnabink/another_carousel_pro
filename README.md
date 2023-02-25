@@ -268,7 +268,7 @@ The autoplay transition duration
   
 ## Credits
 
-### Originally Developed by [JLouage (Julien Louage)](http://www.jlouage.com) <info@jlouage.com>
+### Originally Developed by [JLouage (Julien Louage)](https://github.com/jlouage)
 ### Null Saftey Added by : [Nabraj Khadka](https://github.com/iamnabink)
 
 ## Contributing
