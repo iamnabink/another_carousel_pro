@@ -57,7 +57,7 @@ SizedBox(
 
 
 ```dart
-import 'package:carousel_pro/carousel_pro.dart';
+import 'package:another_carousel_pro/another_carousel_pro.dart';
 
 //...
 SizedBox(
@@ -85,7 +85,7 @@ SizedBox(
 
 
 ```dart
-import 'package:carousel_pro/carousel_pro.dart';
+import 'package:another_carousel_pro/another_carousel_pro.dart';
 
 //...
 SizedBox(
@@ -116,7 +116,7 @@ SizedBox(
 
 
 ```dart
-import 'package:carousel_pro/carousel_pro.dart';
+import 'package:another_carousel_pro/another_carousel_pro.dart';
 
 //...
 SizedBox(
