@@ -17,7 +17,7 @@ class CarouselPage extends StatelessWidget {
         child: SizedBox(
           height: 150.0,
           width: 300.0,
-          child: Carousel(
+          child: AnotherCarousel(
             boxFit: BoxFit.cover,
             autoplay: false,
             animationCurve: Curves.fastOutSlowIn,

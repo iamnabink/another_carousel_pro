@@ -12,7 +12,7 @@ enum DotPosition {
   bottomRight
 }
 
-class Carousel extends StatefulWidget {
+class AnotherCarousel extends StatefulWidget {
   //All the images on this Carousel.
   final List images;
 
@@ -94,7 +94,7 @@ class Carousel extends StatefulWidget {
   //On image change event, passes previous image index and current image index as arguments
   final void Function(int, int)? onImageChange;
 
-  Carousel({
+  AnotherCarousel({
     required this.images,
     this.animationCurve = Curves.ease,
     this.animationDuration = const Duration(milliseconds: 300),
@@ -125,10 +125,10 @@ class Carousel extends StatefulWidget {
   });
 
   @override
-  State createState() => CarouselState();
+  State createState() => AnotherCarouselState();
 }
 
-class CarouselState extends State<Carousel> {
+class AnotherCarouselState extends State<AnotherCarousel> {
   int _currentImageIndex = 0;
   PageController _controller = PageController();
 
