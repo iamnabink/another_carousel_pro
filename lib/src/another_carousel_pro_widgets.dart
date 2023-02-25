@@ -83,14 +83,7 @@ class WidgetCarousel extends StatefulWidget {
       this.overlayShadowColors,
       this.overlayShadowSize = 0.5,
       this.autoplay = true,
-      this.autoplayDuration = const Duration(seconds: 3)})
-      : assert(pages != null),
-        assert(animationCurve != null),
-        assert(animationDuration != null),
-        assert(dotSize != null),
-        assert(dotSpacing != null),
-        assert(dotIncreaseSize != null),
-        assert(dotColor != null);
+      this.autoplayDuration = const Duration(seconds: 3)});
 
   @override
   State createState() => WidgetCarouselState();
@@ -155,10 +148,8 @@ class WidgetCarouselState extends State<WidgetCarousel> {
                         ? (widget.noRadiusForIndicator
                             ? null
                             : BorderRadius.only(
-                                bottomLeft: widget.radius != null
-                                    ? widget.radius
-                                    : Radius.circular(8.0),
-                                bottomRight:widget.radius ?? Radius.circular(8.0)))
+                                bottomLeft: widget.radius,
+                                bottomRight: widget.radius))
                         : null,
                   ),
                   padding: EdgeInsets.all(widget.indicatorBgPadding),

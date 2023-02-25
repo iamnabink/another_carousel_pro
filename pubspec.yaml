@@ -1,12 +1,9 @@
 name: another_carousel_pro
 description: A nulll safe version of flutter-carasoul-pro.
 version: 1.0.0
-author: Nabraj Khadka <nabrajkhadka43@gmail.com>
 homepage: https://github.com/iamnabink/another-carousel-pro
 
 environment:
-#  sdk: '>=2.0.0 <3.0.0'
-#  flutter: ">=1.2.0 <2.0.0"
   sdk: ">=2.12.0 <3.0.0"
   flutter: ">=1.16.0"
 

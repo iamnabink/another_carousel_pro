@@ -1,4 +1,4 @@
-# Null safe version of Carousel Pro [![pub package](https://img.shields.io/pub/v/carousel_pro.svg)](https://pub.dartlang.org/packages/carousel_pro)
+# Null safe version of Carousel Pro [![pub package](https://img.shields.io/pub/v/carousel_pro.svg)](https://pub.dartlang.org/packages/another_carousel_pro)
 
 A Flutter Carousel widget.
 
@@ -36,7 +36,7 @@ SizedBox(
 ),
 
 ```
-![ScreenShot 01](https://github.com/jlouage/flutter-carousel-pro/blob/master/screenshots/screenshot01.png?raw=true "ScreenShot 01")
+![ScreenShot 01](https://github.com/iamnabink/another_carousel_pro/blob/master/screenshots/screenshot01.png?raw=true "ScreenShot 01")
 
 ```dart
 import 'package:another_carousel_pro/another_carousel_pro.dart';
@@ -61,7 +61,7 @@ SizedBox(
 ),
 
 ```
-![ScreenShot 02](https://github.com/jlouage/flutter-carousel-pro/blob/master/screenshots/screenshot02.png?raw=true "ScreenShot 02")
+![ScreenShot 02](https://github.com/iamnabink/another_carousel_pro/blob/master/screenshots/screenshot02.png?raw=true "ScreenShot 02")
 
 
 ```dart
@@ -89,7 +89,7 @@ SizedBox(
 ),
 
 ```
-![ScreenShot 03](https://github.com/jlouage/flutter-carousel-pro/blob/master/screenshots/screenshot03.png?raw=true "ScreenShot 03")
+![ScreenShot 03](https://github.com/iamnabink/another_carousel_pro/blob/master/screenshots/screenshot03.png?raw=true "ScreenShot 03")
 
 
 ```dart
@@ -120,7 +120,7 @@ SizedBox(
 ),
 
 ```
-![ScreenShot 04](https://github.com/jlouage/flutter-carousel-pro/blob/master/screenshots/screenshot04.png?raw=true "ScreenShot 04")
+![ScreenShot 04](https://github.com/iamnabink/another_carousel_pro/blob/master/screenshots/screenshot04.png?raw=true "ScreenShot 04")
 
 
 ```dart
@@ -147,7 +147,7 @@ SizedBox(
 ),
 
 ```
-![ScreenShot 05](https://github.com/jlouage/flutter-carousel-pro/blob/master/screenshots/screenshot05.png?raw=true "ScreenShot 05")
+![ScreenShot 05](https://github.com/iamnabink/another_carousel_pro/blob/master/screenshots/screenshot05.png?raw=true "ScreenShot 05")
 
 ## Parameters and Values
 
