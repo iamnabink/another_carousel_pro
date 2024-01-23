@@ -1,13 +1,12 @@
 name: another_carousel_pro
-description: A nulll safe version of flutter-carasoul-pro package.
+description: A null safe version of flutter-carasoul-pro package.
 version: 1.0.1
-homepage: https://github.com/bienvenuelisis/another_carousel_pro
+homepage: https://github.com/iamnabink/another_carousel_pro
 license: MIT
-issue_tracker: https://github.com/bienvenuelisis/another_carousel_pro/issues
+issue_tracker: https://github.com/iamnabink/another_carousel_pro/issues
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
-  flutter: ">=1.16.0"
 
 dependencies:
   flutter:

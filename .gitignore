@@ -3,6 +3,7 @@
 .idea
 .packages
 .pub/
+NOTE.md
 
 build/
 ios/.generated/

@@ -2,7 +2,8 @@
 
 ## [1.0.1]
 
-* Resolve minor issue with Flutter latest release : ClipRRect borderRadius property can't be null.
+* Resolved minor issue with Flutter latest release : ClipRRect borderRadius property can't be null.
+* Updated README.md , fix dart convention issue
 
 ## [1.0.0]
 
