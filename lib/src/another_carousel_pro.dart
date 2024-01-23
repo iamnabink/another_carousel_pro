@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+/// for bottom dot position
 enum DotPosition {
   topLeft,
   topCenter,
@@ -12,88 +13,90 @@ enum DotPosition {
   bottomRight
 }
 
+/// Carousel Widget
 class AnotherCarousel extends StatefulWidget {
-  //All the images on this Carousel.
+  ///All the images on this Carousel.
   final List images;
 
-  //All the images on this Carousel.
+  ///All the images on this Carousel.
   final defaultImage;
 
-  //The transition animation timing curve. Default is [Curves.ease]
+  ///The transition animation timing curve. Default is [Curves.ease]
   final Curve animationCurve;
 
-  //The transition animation duration. Default is 300ms.
+  ///The transition animation duration. Default is 300ms.
   final Duration animationDuration;
 
-  // The base size of the dots. Default is 8.0
+  /// The base size of the dots. Default is 8.0
   final double dotSize;
 
-  // The increase in the size of the selected dot. Default is 2.0
+  /// The increase in the size of the selected dot. Default is 2.0
   final double dotIncreaseSize;
 
-  // The distance between the center of each dot. Default is 25.0
+  /// The distance between the center of each dot. Default is 25.0
   final double dotSpacing;
 
-  // The Color of each dot. Default is Colors.white
+  /// The Color of each dot. Default is Colors.white
   final Color dotColor;
 
-  // The background Color of the dots. Default is [Colors.grey[800].withOpacity(0.5)]
+  /// The background Color of the dots. Default is [Colors.grey[800].withOpacity(0.5)]
   final Color? dotBgColor;
 
-  // The Color of each increased dot. Default is Colors.white
+  /// The Color of each increased dot. Default is Colors.white
   final Color dotIncreasedColor;
 
-  // Enable or Disable the indicator (dots). Default is true
+  /// Enable or Disable the indicator (dots). Default is true
   final bool showIndicator;
 
-  //Padding Size of the background Indicator. Default is 20.0
+  ///Padding Size of the background Indicator. Default is 20.0
   final double indicatorBgPadding;
 
-  //How to show the images in the box. Default is cover
+  ///How to show the images in the box. Default is cover
   final BoxFit boxFit;
 
-  //Enable/Disable radius Border for the images. Default is false
+  ///Enable/Disable radius Border for the images. Default is false
   final bool borderRadius;
 
-  //Border Radius of the images. Default is [Radius.circular(8.0)]
+  ///Border Radius of the images. Default is [Radius.circular(8.0)]
   final Radius? radius;
 
-  //Indicator position. Default bottomCenter
+  ///Indicator position. Default bottomCenter
   final DotPosition dotPosition;
 
-  //Move the Indicator Horizontally relative to the dot position
+  ///Move the Indicator Horizontally relative to the dot position
   final double dotHorizontalPadding;
 
-  //Move the Indicator Vertically relative to the dot position
+  ///Move the Indicator Vertically relative to the dot position
   final double dotVerticalPadding;
 
-  //Move the Indicator From the Bottom
+  ///Move the Indicator From the Bottom
   final double moveIndicatorFromBottom;
 
-  //Remove the radius bottom from the indicator background. Default false
+  ///Remove the radius bottom from the indicator background. Default false
   final bool noRadiusForIndicator;
 
-  //Enable/Disable Image Overlay Shadow. Default false
+  ///Enable/Disable Image Overlay Shadow. Default false
   final bool overlayShadow;
 
-  //Choose the color of the overlay Shadow color. Default Colors.grey[800]
+  ///Choose the color of the overlay Shadow color. Default Colors.grey[800]
   final Color? overlayShadowColors;
 
-  //Choose the size of the Overlay Shadow, from 0.0 to 1.0. Default 0.5
+  ///Choose the size of the Overlay Shadow, from 0.0 to 1.0. Default 0.5
   final double overlayShadowSize;
 
-  //Enable/Disable the auto play of the slider. Default true
+  ///Enable/Disable the auto play of the slider. Default true
   final bool autoplay;
 
-  //Duration of the Auto play slider by seconds. Default 3 seconds
+  ///Duration of the Auto play slider by seconds. Default 3 seconds
   final Duration autoplayDuration;
 
-  //On image tap event, passes current image index as an argument
+  ///On image tap event, passes current image index as an argument
   final void Function(int)? onImageTap;
 
-  //On image change event, passes previous image index and current image index as arguments
+  ///On image change event, passes previous image index and current image index as arguments
   final void Function(int, int)? onImageChange;
 
+  //// Default constructor
   AnotherCarousel({
     required this.images,
     this.animationCurve = Curves.ease,
@@ -171,7 +174,7 @@ class AnotherCarouselState extends State<AnotherCarousel> {
                   ? BorderRadius.all(widget.radius ?? Radius.circular(8.0))
                   : null,
               image: DecorationImage(
-                //colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.dstATop),
+                ///colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.dstATop),
                 image: netImage,
                 fit: widget.boxFit,
               ),
@@ -224,39 +227,39 @@ class AnotherCarouselState extends State<AnotherCarousel> {
         }
       },
     ).toList();
-    // : [
-    //     widget.defaultImage is ImageProvider
-    //         ? Container(
-    //             decoration: BoxDecoration(
-    //               borderRadius: widget.borderRadius
-    //                   ? BorderRadius.all( widget.radius ?? Radius.circular(8.0)): null,
-    //               image: DecorationImage(
-    //                 //colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.dstATop),
-    //                 image: widget.defaultImage,
-    //                 fit: widget.boxFit,
-    //               ),
-    //             ),
-    //             child: widget.overlayShadow
-    //                 ? Container(
-    //                     decoration: BoxDecoration(
-    //                       gradient: LinearGradient(
-    //                         begin: Alignment.bottomCenter,
-    //                         end: Alignment.center,
-    //                         stops: [0.0, widget.overlayShadowSize],
-    //                         colors: [
-    //                           widget.overlayShadowColors != null
-    //                               ? widget.overlayShadowColors!.withOpacity(1.0)
-    //                               : Colors.grey[800]!.withOpacity(1.0),
-    //                           widget.overlayShadowColors != null
-    //                               ? widget.overlayShadowColors!.withOpacity(0.0) : Colors.grey[800]!.withOpacity(0.0)
-    //                         ],
-    //                       ),
-    //                     ),
-    //                   )
-    //                 : Container(),
-    //           )
-    //         : widget.defaultImage,
-    //   ];
+    /// : [
+    ///     widget.defaultImage is ImageProvider
+    ///         ? Container(
+    ///             decoration: BoxDecoration(
+    ///               borderRadius: widget.borderRadius
+    ///                   ? BorderRadius.all( widget.radius ?? Radius.circular(8.0)): null,
+    ///               image: DecorationImage(
+    ///                 ///colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.dstATop),
+    ///                 image: widget.defaultImage,
+    ///                 fit: widget.boxFit,
+    ///               ),
+    ///             ),
+    ///             child: widget.overlayShadow
+    ///                 ? Container(
+    ///                     decoration: BoxDecoration(
+    ///                       gradient: LinearGradient(
+    ///                         begin: Alignment.bottomCenter,
+    ///                         end: Alignment.center,
+    ///                         stops: [0.0, widget.overlayShadowSize],
+    ///                         colors: [
+    ///                           widget.overlayShadowColors != null
+    ///                               ? widget.overlayShadowColors!.withOpacity(1.0)
+    ///                               : Colors.grey[800]!.withOpacity(1.0),
+    ///                           widget.overlayShadowColors != null
+    ///                               ? widget.overlayShadowColors!.withOpacity(0.0) : Colors.grey[800]!.withOpacity(0.0)
+    ///                         ],
+    ///                       ),
+    ///                     ),
+    ///                   )
+    ///                 : Container(),
+    ///           )
+    ///         : widget.defaultImage,
+    ///   ];
 
     final bottom = [
       DotPosition.bottomLeft,
@@ -362,7 +365,7 @@ class AnotherCarouselState extends State<AnotherCarousel> {
   }
 }
 
-/// An indicator showing the currently selected page of a PageController
+//// An indicator showing the currently selected page of a PageController
 class DotsIndicator extends AnimatedWidget {
   DotsIndicator(
       {required this.controller,
@@ -375,28 +378,28 @@ class DotsIndicator extends AnimatedWidget {
       this.dotSpacing})
       : super(listenable: controller);
 
-  // The PageController that this DotsIndicator is representing.
+  /// The PageController that this DotsIndicator is representing.
   late final PageController controller;
 
-  // The number of items managed by the PageController
+  /// The number of items managed by the PageController
   final int? itemCount;
 
-  // Called when a dot is tapped
+  /// Called when a dot is tapped
   final ValueChanged<int>? onPageSelected;
 
-  // The color of the dots.
+  /// The color of the dots.
   final Color? color;
 
-  // The color of the increased dot.
+  /// The color of the increased dot.
   final Color? increasedColor;
 
-  // The base size of the dots
+  /// The base size of the dots
   final double? dotSize;
 
-  // The increase in the size of the selected dot
+  /// The increase in the size of the selected dot
   final double? dotIncreaseSize;
 
-  // The distance between the center of each dot
+  /// The distance between the center of each dot
   final double? dotSpacing;
 
   Widget _buildDot(int index) {
