@@ -128,10 +128,11 @@ class AnotherCarousel extends StatefulWidget {
   });
 
   @override
-  State createState() => AnotherCarouselState();
+  State createState() => _AnotherCarouselState();
 }
 
-class AnotherCarouselState extends State<AnotherCarousel> {
+/// private state class for AnotherCarousel
+class _AnotherCarouselState extends State<AnotherCarousel> {
   int _currentImageIndex = 0;
   PageController _controller = PageController();
 
