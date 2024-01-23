@@ -227,6 +227,7 @@ class AnotherCarouselState extends State<AnotherCarousel> {
         }
       },
     ).toList();
+
     /// : [
     ///     widget.defaultImage is ImageProvider
     ///         ? Container(
