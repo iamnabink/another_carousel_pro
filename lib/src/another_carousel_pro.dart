@@ -200,7 +200,7 @@ class AnotherCarouselState extends State<AnotherCarousel> {
           return ClipRRect(
             borderRadius: widget.borderRadius
                 ? BorderRadius.all(widget.radius ?? Radius.circular(8.0))
-                : null,
+                : BorderRadius.zero,
             child: Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
