@@ -3,6 +3,7 @@
 ## [1.0.2]
 
 * Fixed dart convention 
+* Note: no changes in APIs
 
 ## [1.0.1]
 
